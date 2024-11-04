@@ -1,0 +1,108 @@
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(132, 5, 121);
+  background-color: rgba(132, 5, 121, 0.2);
+  overflow-y: hidden;
+  backdrop-filter: blur(15px);
+  transition: 0.5s;
+}
+
+.button {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  transition: all 400ms ease;
+}
+
+.button:hover {
+  color: #f1f1f1;
+  transform: scale(2);
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.overlay .avatar {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+li {
+  float: center;
+  display: block;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 95.4px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+  transform: scale(1.5);
+  transition: var(--transition);
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+/* =================== MEDIA QUERIES (SMALLL DEVICES) ====================== */
+
+@media screen and (max-width: 600px) {
+  li a {
+      font-size: 1rem;
+      gap: 0rem;
+      padding: 1px 0px;
+  }
+
+  .n-icon {
+    font-size: 1rem;
+  }
+}
